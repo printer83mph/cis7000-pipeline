@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CIS-7000 Asset Metadata",
+  "description": "An asset's metadata for use in CIS-7000 Production Pipeline, SP2024",
+  "properties": {
+    "assetName": {
+      "description": "The asset's name, in camelCase",
+      "type": "string"
+    },
+    "author": {
+      "description": "The asset author's Pennkey",
+      "type": "string"
+    },
+    "lastEdited": {
+      "description": "The day this asset was last edited",
+      "type": "string",
+      "format": "date"
+    },
+    "historical": {
+      "description": "All authors who have historically modified this asset, including the original author",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "The historical author's Pennkey"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "version": {
+      "description": "Major and minor version of this asset, i.e. 1.0",
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "keywords": {
+      "description": "Key words or phrases associated with this asset",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "assetName",
+    "author",
+    "lastEdited",
+    "historical",
+    "version"
+  ]
+}
