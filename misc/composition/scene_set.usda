@@ -1,0 +1,55 @@
+#usda 1.0
+() {
+    def Chef "chef" (
+        prepend payload = [
+            @./path/to/file.usd@</World/some/target>,
+            @./path/to/other/file.usd@
+        ]
+    )
+    {
+    }
+    
+    def "KitchenaidReference"(
+        prepend references=@./kitchenaid@</>
+    ) {
+        float3 xformOp:translate = (2, 0, 3)
+        float3 xformOp:rotate = (2, 0, 3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotate"]
+    }
+
+    def "blenderReference"(
+        prepend references=@./blender@</>
+    ) {
+        float3 xformOp:translate = (6, 1, 5)
+        float3 xformOp:rotate = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotate"]
+    }
+    
+    def "microwave"(
+        prepend references=@./microwave/microwave.usd@</>
+    ) {
+        float3 xformOp:translate = (2, -294, 3)
+        float3 xformOp:rotate = (2, 0, 3)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotate"]
+    }
+
+    def "mugReference"(
+        prepend references=@./mug/mug.usda@</>
+    ) {
+        float3 xformOp:translate = (3, 5, 3)
+        float3 xformOp:rotate = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:rotate"]
+    }
+
+    def "chairReference"(
+        prepend references=@./chair/chair.usda@</>
+    ) {
+        float3 xformOp:translate = (1, 1, 1)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}
+
+
+
+
+
