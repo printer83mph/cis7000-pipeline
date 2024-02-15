@@ -1,11 +1,14 @@
 {
-  "$schema": "https://gist.githubusercontent.com/printer83mph/20f8d3a14c6cabdda64af9e20559dbe9/raw/ff7b3a66bfcf426bc8ec3a36cbf27e28f633c3c1/cis7000-asset-v1.2.json",
+  "$schema": "../asset-schema-v1.3.0.json",
   "assetName": "kitchenaid",
   "author": "tlshaw",
   "version": "1.0",
-  "lastEdited": "2024-02-05",
   "historical": [
-    "tlshaw"
+    {
+      "author": "tlshaw",
+      "date": "2024-02-05",
+      "changes": "Initial version"
+    }
   ],
   "keywords": [
     "mixer",
