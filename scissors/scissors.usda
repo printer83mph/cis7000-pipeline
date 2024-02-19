@@ -1,0 +1,20 @@
+#usda 1.0
+(
+    defaultPrim = "scissors"  
+)
+
+def "scissors"
+{
+    variantSet "lodVariant" = {
+        "high" (
+            prepend references = [@./scissorsLOD0.usda@]
+        )
+        "medium" (
+            prepend references = [@./scissorsLOD1.usda@]
+        )
+        "low" (
+            prepend references = [@./scissorsLOD2.usda@]
+        )
+    }
+}
+
