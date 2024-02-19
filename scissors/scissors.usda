@@ -3,18 +3,26 @@
     defaultPrim = "scissors"  
 )
 
-def "scissors"
+def Xform "scissors" (
+    variants = {
+        string lodVariant = "high"
+    }
+    prepend variantSets = "lodVariant"
+)
 {
     variantSet "lodVariant" = {
         "high" (
-            prepend references = [@./scissorsLOD0.usda@]
-        )
+            prepend references = @./scissorsLOD0.usda@
+        ) {
+            double3 xformOp:translate = (-2, 0, 0)
+            uniform token[] xformOpOrder = ["xformOp:translate"]
+        }
         "medium" (
-            prepend references = [@./scissorsLOD1.usda@]
-        )
+            prepend references = @./scissorsLOD1.usda@
+        ) {}
         "low" (
-            prepend references = [@./scissorsLOD2.usda@]
-        )
+            prepend references = @./scissorsLOD2.usda@
+        ) {}
     }
 }
 
