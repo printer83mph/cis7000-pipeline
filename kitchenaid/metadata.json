@@ -1,8 +1,7 @@
 {
-  "$schema": "../asset-schema-v1.3.0.json",
   "assetName": "kitchenaid",
   "author": "tlshaw",
-  "version": "1.0",
+  "version": "1.2",
   "historical": [
     {
       "author": "tlshaw",
