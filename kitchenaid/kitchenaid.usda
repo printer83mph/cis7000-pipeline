@@ -1,0 +1,28 @@
+#usda 1.0
+(
+    defaultPrim = "kitchenaid"
+)
+def Xform "kitchenaid"
+(
+    variants = {
+        string LOD = "LOD0"
+    }
+    prepend variantSets = "LOD"
+)
+{
+    variantSet "LOD" =
+    {
+        "LOD0"
+        (
+            references = @./kitchenaidLOD0.usda@
+        ){}
+        "LOD1"
+        (
+            references = @./kitchenaidLOD1.usda@
+        ){}
+        "LOD2"
+        (
+            references = @./kitchenaidLOD2.usda@
+        ){}
+    }
+}
