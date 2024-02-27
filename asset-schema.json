@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CIS-7000 Asset Metadata v1.3.0",
+  "title": "CIS-7000 Asset Metadata v1.3",
   "description": "An asset's metadata for use in CIS-7000 Production Pipeline, SP2024",
   "properties": {
     "assetName": {
@@ -18,21 +18,31 @@
         "type": "object",
         "description": "A modification to this asset",
         "properties": {
-          "author": {
-            "type": "string",
-            "description": "The Pennkey of the author of this modification"
-          },
           "date": {
             "description": "The date of this modification",
             "type": "string",
             "format": "date"
           },
+          "author": {
+            "type": "string",
+            "description": "The Pennkey of the author of this modification"
+          },
           "changes": {
             "description": "A brief description of the changes made in this modification",
             "type": "string"
+          },
+          "version": {
+            "description": "Major and minor version numbers of this iteration, i.e. 1.0",
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+$"
+          },
+          "schemaVersion": {
+            "description": "Version of the asset schema this iteration uses",
+            "type": "string",
+            "pattern": "^[0-9]+\\.[0-9]+$"
           }
         },
-        "required": ["author", "date", "changes"]
+        "required": ["date", "author", "changes", "version", "schemaVersion"]
       },
       "minItems": 1,
       "uniqueItems": true
